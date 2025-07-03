@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Patrick+Hand&display=swap" rel="stylesheet">
     <style>
+        /* ===================== */
+        /* GLOBAL STYLES & RESET */
+        /* ===================== */
         * {
             margin: 0;
             padding: 0;
@@ -39,7 +42,62 @@
             padding: 0 15px;
         }
 
-        /* Header Styles */
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--grand-blue);
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .section-title p {
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-yellow);
+            color: #333;
+            box-shadow: 0 4px 12px rgba(249, 199, 79, 0.4);
+        }
+
+        .btn-primary:hover {
+            background-color: #f8b62a;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(249, 199, 79, 0.5);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 3px solid white;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+        }
+
+        /* ===================== */
+        /* HEADER & NAVIGATION */
+        /* ===================== */
         header {
             background-color: white;
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
@@ -199,7 +257,9 @@
             box-shadow: 0 6px 15px rgba(26, 86, 219, 0.4);
         }
 
-        /* Hero Section */
+        /* ===================== */
+        /* HERO SECTION */
+        /* ===================== */
         .hero {
             background: linear-gradient(135deg, var(--grand-blue), var(--grand-blue-dark));
             color: white;
@@ -251,63 +311,12 @@
             margin-top: 30px;
         }
 
-        .btn {
-            padding: 15px 35px;
-            border-radius: 30px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.3s;
-            display: inline-block;
-            font-size: 18px;
-            text-align: center;
-        }
-
-        .btn-primary {
-            background-color: var(--accent-yellow);
-            color: #333;
-            box-shadow: 0 4px 12px rgba(249, 199, 79, 0.4);
-        }
-
-        .btn-primary:hover {
-            background-color: #f8b62a;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(249, 199, 79, 0.5);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: white;
-            border: 3px solid white;
-        }
-
-        .btn-secondary:hover {
-            background-color: rgba(255, 255, 255, 0.15);
-            transform: translateY(-3px);
-        }
-
-        /* Services Section */
+        /* ===================== */
+        /* SERVICES SECTION */
+        /* ===================== */
         .services {
             padding: 100px 0;
             background-color: var(--off-white-dark);
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h2 {
-            font-size: 2.8rem;
-            color: var(--grand-blue);
-            margin-bottom: 15px;
-            font-weight: 800;
-        }
-
-        .section-title p {
-            color: #555;
-            max-width: 700px;
-            margin: 0 auto;
-            font-size: 1.2rem;
         }
 
         .services-grid {
@@ -368,7 +377,9 @@
             background: #38967a;
         }
 
-        /* Testimonials - Tutor Schools Section */
+        /* ===================== */
+        /* TUTOR SCHOOLS SECTION */
+        /* ===================== */
         .testimonials {
             padding: 100px 0;
             background: linear-gradient(to bottom, var(--grand-blue-light), var(--grand-blue));
@@ -455,7 +466,9 @@
             font-weight: 700;
         }
 
-        /* How It Works */
+        /* ===================== */
+        /* HOW IT WORKS SECTION */
+        /* ===================== */
         .how-it-works {
             padding: 100px 0;
             background-color: white;
@@ -502,7 +515,9 @@
             color: #555;
         }
 
-        /* Packages Section */
+        /* ===================== */
+        /* PACKAGES SECTION */
+        /* ===================== */
         .packages {
             padding: 100px 0;
             background-color: var(--off-white);
@@ -638,7 +653,9 @@
             margin-top: 10px;
         }
 
-        /* CTA Section */
+        /* ===================== */
+        /* CTA SECTION */
+        /* ===================== */
         .cta-section {
             background: linear-gradient(135deg, var(--accent-green), #2d8c70);
             color: white;
@@ -678,7 +695,9 @@
             opacity: 0.9;
         }
 
-        /* Footer */
+        /* ===================== */
+        /* FOOTER SECTION */
+        /* ===================== */
         footer {
             background: var(--grand-blue-dark);
             color: #cbd5e1;
@@ -768,7 +787,9 @@
             font-size: 0.95rem;
         }
 
-        /* Responsive Design */
+        /* ===================== */
+        /* RESPONSIVE DESIGN */
+        /* ===================== */
         @media (max-width: 992px) {
             .hero h1 {
                 font-size: 3rem;
@@ -812,7 +833,9 @@
     </style>
 </head>
 <body>
-    <!-- Heade -->
+    <!-- ===================== -->
+    <!-- HEADER & NAVIGATION -->
+    <!-- ===================== -->
     <header>
         <div class="container">
             <nav class="navbar">
@@ -831,7 +854,9 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- ===================== -->
+    <!-- HERO SECTION -->
+    <!-- ===================== -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
@@ -845,7 +870,9 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- ===================== -->
+    <!-- SERVICES SECTION -->
+    <!-- ===================== -->
     <section class="services" id="services">
         <div class="container">
             <div class="section-title">
@@ -869,7 +896,6 @@
                     <p>Expert SAT, ACT, and AP exam preparation with proven strategies to boost scores and confidence.</p>
                     <a href="#" class="btn">Learn More</a>
                 </div>
-                <!-- New service card -->
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-file-alt"></i>
@@ -882,107 +908,110 @@
         </div>
     </section>
 
-  <!-- Tutor Schools Section -->
-<section class="testimonials">
-    <div class="container">
-        <div class="section-title">
-            <h2>Our Tutors' Schools</h2>
-            <p>Top talent from the nation’s leading universities</p>
+    <!-- ===================== -->
+    <!-- TUTOR SCHOOLS SECTION -->
+    <!-- ===================== -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Tutors' Schools</h2>
+                <p>Top talent from the nation's leading universities</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <img src="https://1000logos.net/wp-content/uploads/2017/11/UCLA-Logo.png" alt="UCLA Logo">
+                        </div>
+                        <div class="client-details">
+                            <h4>University of California, Los Angeles</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Harvard_University_coat_of_arms.svg/1200px-Harvard_University_coat_of_arms.svg.png" alt="Harvard Logo">
+                        </div>
+                        <div class="client-details">
+                            <h4>Harvard University</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/320px-MIT_logo.svg.png" alt="MIT Logo">
+                        </div>
+                        <div class="client-details">
+                            <h4>Massachusetts Institute of Technology</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <img src="https://cdn.freebiesupply.com/logos/large/2x/michigan-wolverines-2-logo-png-transparent.png" alt="Michigan Logo">
+                        </div>
+                        <div class="client-details">
+                            <h4>University of Michigan</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <img src="https://images.parchment.com/images/college/1572-crest-250-200-5efaebd37b383a717d4234fb7a9623c1.png" alt="UT Austin Logo">
+                        </div>
+                        <div class="client-details">
+                            <h4>University of Texas at Austin</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/NU_RGB_seal_R.png" alt="Northeastern Logo">
+                        </div>
+                        <div class="client-details">
+                            <h4>Northeastern University</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <img src="https://logos-world.net/wp-content/uploads/2022/02/UC-Berkeley-Seal-Logo.png" alt="UC Berkeley Logo">
+                        </div>
+                        <div class="client-details">
+                            <h4>University of California, Berkeley</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <img src="https://logos-world.net/wp-content/uploads/2021/09/NYU-Logo.png" alt="NYU Logo">
+                        </div>
+                        <div class="client-details">
+                            <h4>New York University</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="client-info">
-                    <div class="client-avatar">
-                        <img src="https://1000logos.net/wp-content/uploads/2017/11/UCLA-Logo.png" alt="UCLA Logo">
-                    </div>
-                    <div class="client-details">
-                        <h4>University of California, Los Angeles</h4>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="client-info">
-                    <div class="client-avatar">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Harvard_University_coat_of_arms.svg/1200px-Harvard_University_coat_of_arms.svg.png" alt="Harvard Logo">
-                    </div>
-                    <div class="client-details">
-                        <h4>Harvard University</h4>
-                    </div>
-                </div>
-            </div>
+    </section>
 
-            <div class="testimonial-card">
-                <div class="client-info">
-                    <div class="client-avatar">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/320px-MIT_logo.svg.png" alt="MIT Logo">
-                    </div>
-                    <div class="client-details">
-                        <h4>Massachusetts Institute of Technology</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="client-info">
-                    <div class="client-avatar">
-                        <img src="https://cdn.freebiesupply.com/logos/large/2x/michigan-wolverines-2-logo-png-transparent.png" alt="Michigan Logo">
-                    </div>
-                    <div class="client-details">
-                        <h4>University of Michigan</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="client-info">
-                    <div class="client-avatar">
-                        <img src="https://images.parchment.com/images/college/1572-crest-250-200-5efaebd37b383a717d4234fb7a9623c1.png" alt="UT Austin Logo">
-                    </div>
-                    <div class="client-details">
-                        <h4>University of Texas at Austin</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="client-info">
-                    <div class="client-avatar">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/NU_RGB_seal_R.png" alt="Northeastern Logo">
-                    </div>
-                    <div class="client-details">
-                        <h4>Northeastern University</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="client-info">
-                    <div class="client-avatar">
-                        <img src="https://logos-world.net/wp-content/uploads/2022/02/UC-Berkeley-Seal-Logo.png" alt="UC Berkeley Logo">
-                    </div>
-                    <div class="client-details">
-                        <h4>University of California, Berkeley</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="client-info">
-                    <div class="client-avatar">
-                        <img src="https://logos-world.net/wp-content/uploads/2021/09/NYU-Logo.png" alt="NYU Logo">
-                    </div>
-                    <div class="client-details">
-                        <h4>New York University</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-    <!-- How It Works -->
+    <!-- ===================== -->
+    <!-- HOW IT WORKS SECTION -->
+    <!-- ===================== -->
     <section class="how-it-works">
         <div class="container">
             <div class="section-title">
@@ -1014,162 +1043,165 @@
         </div>
     </section>
 
- <!-- Packages Section -->
-<section class="packages" id="packages">
-    <div class="container">
-        <div class="section-title">
-            <h2>Learning Packages & Programs</h2>
-            <p>Flexible options tailored to your educational needs</p>
-        </div>
-        
-        <div class="package-container">
-            <!-- LESSON PACKAGES -->
-            <div class="package-category">
-                <div class="category-title">
-                    <div class="category-icon">
-                        <i class="fas fa-book-open"></i>
+    <!-- ===================== -->
+    <!-- PACKAGES SECTION -->
+    <!-- ===================== -->
+    <section class="packages" id="packages">
+        <div class="container">
+            <div class="section-title">
+                <h2>Learning Packages & Programs</h2>
+                <p>Flexible options tailored to your educational needs</p>
+            </div>
+            
+            <div class="package-container">
+                <!-- LESSON PACKAGES -->
+                <div class="package-category">
+                    <div class="category-title">
+                        <div class="category-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Lesson Packages</h3>
                     </div>
-                    <h3>Lesson Packages</h3>
+                    
+                    <div class="package-grid">
+                        <!-- PAY-AS-YOU-GO -->
+                        <div class="package-card">
+                            <div class="package-header">
+                                <div class="package-name">Pay-as-you-go</div>
+                                <div class="package-price">$45 / lesson</div>
+                            </div>
+                            <p>Flexibility to book sessions one at a time</p>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check-circle"></i> No commitment</li>
+                                <li><i class="fas fa-check-circle"></i> Any K-12 subject</li>
+                                <li><i class="fas fa-check-circle"></i> Online or in-person</li>
+                            </ul>
+                            <a href="#" class="btn"><i class="fas fa-shopping-cart"></i> Book Now</a>
+                        </div>
+
+                        <!-- STARTER -->
+                        <div class="package-card">
+                            <div class="package-header">
+                                <div class="package-name">Starter Pack</div>
+                                <div class="package-price">$40 / lesson</div>
+                            </div>
+                            <p>Perfect for trying out tutoring or targeted help</p>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check-circle"></i> 5 hours of tutoring</li>
+                                <li><i class="fas fa-check-circle"></i> Any K-12 subject</li>
+                                <li><i class="fas fa-check-circle"></i> Homework help included</li>
+                                <li><i class="fas fa-check-circle"></i> 2-month validity</li>
+                                <li><i class="fas fa-check-circle"></i> Online or in-person</li>
+                            </ul>
+                            <div class="savings-badge">Save 10% vs single sessions</div>
+                            <a href="#" class="btn"><i class="fas fa-shopping-cart"></i> Get Started</a>
+                        </div>
+
+                        <!-- STANDARD -->
+                        <div class="package-card">
+                            <div class="package-header">
+                                <div class="package-name">Standard Pack</div>
+                                <div class="package-price">$35 / lesson</div>
+                            </div>
+                            <p>Great for ongoing support in one subject</p>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check-circle"></i> 10 hours of tutoring</li>
+                                <li><i class="fas fa-check-circle"></i> Progress tracking</li>
+                                <li><i class="fas fa-check-circle"></i> Mid-term assessment</li>
+                                <li><i class="fas fa-check-circle"></i> 4-month validity</li>
+                                <li><i class="fas fa-check-circle"></i> Email support</li>
+                            </ul>
+                            <div class="savings-badge">Save 20% vs single sessions</div>
+                            <a href="#" class="btn"><i class="fas fa-shopping-cart"></i> Get Started</a>
+                        </div>
+
+                        <!-- PREMIUM -->
+                        <div class="package-card">
+                            <div class="package-header">
+                                <div class="package-name">Premium Pack</div>
+                                <div class="package-price">$33 / lesson</div>
+                            </div>
+                            <p>Best value for comprehensive learning support</p>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check-circle"></i> 20 hours of tutoring</li>
+                                <li><i class="fas fa-check-circle"></i> Multiple subjects</li>
+                                <li><i class="fas fa-check-circle"></i> Priority scheduling</li>
+                                <li><i class="fas fa-check-circle"></i> Monthly progress reports</li>
+                                <li><i class="fas fa-check-circle"></i> 6-month validity</li>
+                            </ul>
+                            <div class="savings-badge">Save 30% vs single sessions</div>
+                            <a href="#" class="btn"><i class="fas fa-shopping-cart"></i> Get Started</a>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="package-grid">
-                    <!-- PAY-AS-YOU-GO -->
-                    <div class="package-card">
-                        <div class="package-header">
-                            <div class="package-name">Pay-as-you-go</div>
-                            <div class="package-price">$45 / lesson</div>
-                        </div>
-                        <p>Flexibility to book sessions one at a time</p>
-                        <ul class="package-features">
-                            <li><i class="fas fa-check-circle"></i> No commitment</li>
-                            <li><i class="fas fa-check-circle"></i> Any K-12 subject</li>
-                            <li><i class="fas fa-check-circle"></i> Online or in-person</li>
-                        </ul>
-                        <a href="#" class="btn"><i class="fas fa-shopping-cart"></i> Book Now</a>
-                    </div>
 
-                    <!-- STARTER -->
-                    <div class="package-card">
-                        <div class="package-header">
-                            <div class="package-name">Starter Pack</div>
-                            <div class="package-price">$40 / lesson</div>
+                <!-- SPECIALTY PROGRAMS -->
+                <div class="package-category">
+                    <div class="category-title">
+                        <div class="category-icon">
+                            <i class="fas fa-star"></i>
                         </div>
-                        <p>Perfect for trying out tutoring or targeted help</p>
-                        <ul class="package-features">
-                            <li><i class="fas fa-check-circle"></i> 5 hours of tutoring</li>
-                            <li><i class="fas fa-check-circle"></i> Any K-12 subject</li>
-                            <li><i class="fas fa-check-circle"></i> Homework help included</li>
-                            <li><i class="fas fa-check-circle"></i> 2-month validity</li>
-                            <li><i class="fas fa-check-circle"></i> Online or in-person</li>
-                        </ul>
-                        <div class="savings-badge">Save 10% vs single sessions</div>
-                        <a href="#" class="btn"><i class="fas fa-shopping-cart"></i> Get Started</a>
+                        <h3>Specialty Programs</h3>
                     </div>
-
-                    <!-- STANDARD -->
-                    <div class="package-card">
-                        <div class="package-header">
-                            <div class="package-name">Standard Pack</div>
-                            <div class="package-price">$35 / lesson</div>
+                    
+                    <div class="package-grid">
+                        <!-- PAY-AS-YOU-GO -->
+                        <div class="package-card">
+                            <div class="package-header">
+                                <div class="package-name">Test Prep Single Session</div>
+                                <div class="package-price">$50 / lesson</div>
+                            </div>
+                            <p>One-on-one prep for a specific topic</p>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check-circle"></i> Tailored SAT/ACT help</li>
+                                <li><i class="fas fa-check-circle"></i> Strategy or practice focus</li>
+                                <li><i class="fas fa-check-circle"></i> Flexible scheduling</li>
+                            </ul>
+                            <a href="#" class="btn"><i class="fas fa-shopping-cart"></i> Book Now</a>
                         </div>
-                        <p>Great for ongoing support in one subject</p>
-                        <ul class="package-features">
-                            <li><i class="fas fa-check-circle"></i> 10 hours of tutoring</li>
-                            <li><i class="fas fa-check-circle"></i> Progress tracking</li>
-                            <li><i class="fas fa-check-circle"></i> Mid-term assessment</li>
-                            <li><i class="fas fa-check-circle"></i> 4-month validity</li>
-                            <li><i class="fas fa-check-circle"></i> Email support</li>
-                        </ul>
-                        <div class="savings-badge">Save 20% vs single sessions</div>
-                        <a href="#" class="btn"><i class="fas fa-shopping-cart"></i> Get Started</a>
-                    </div>
 
-                    <!-- PREMIUM -->
-                    <div class="package-card">
-                        <div class="package-header">
-                            <div class="package-name">Premium Pack</div>
-                            <div class="package-price">$33 / lesson</div>
+                        <!-- SAT/ACT PREP -->
+                        <div class="package-card">
+                            <div class="package-header">
+                                <div class="package-name">SAT/ACT Prep</div>
+                                <div class="package-price">$42 / lesson</div>
+                            </div>
+                            <p>Comprehensive test preparation program</p>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check-circle"></i> 12 hours of instruction</li>
+                                <li><i class="fas fa-check-circle"></i> Full practice tests</li>
+                                <li><i class="fas fa-check-circle"></i> Strategy sessions</li>
+                                <li><i class="fas fa-check-circle"></i> Personalized study plan</li>
+                                <li><i class="fas fa-check-circle"></i> Score improvement guarantee</li>
+                            </ul>
+                            <a href="#" class="btn"><i class="fas fa-shopping-cart"></i> Enroll Now</a>
                         </div>
-                        <p>Best value for comprehensive learning support</p>
-                        <ul class="package-features">
-                            <li><i class="fas fa-check-circle"></i> 20 hours of tutoring</li>
-                            <li><i class="fas fa-check-circle"></i> Multiple subjects</li>
-                            <li><i class="fas fa-check-circle"></i> Priority scheduling</li>
-                            <li><i class="fas fa-check-circle"></i> Monthly progress reports</li>
-                            <li><i class="fas fa-check-circle"></i> 6-month validity</li>
-                        </ul>
-                        <div class="savings-badge">Save 30% vs single sessions</div>
-                        <a href="#" class="btn"><i class="fas fa-shopping-cart"></i> Get Started</a>
+
+                        <!-- COLLEGE APP -->
+                        <div class="package-card">
+                            <div class="package-header">
+                                <div class="package-name">College App Guidance</div>
+                                <div class="package-price">$100 / session</div>
+                            </div>
+                            <p>Complete support for college applications</p>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check-circle"></i> Essay coaching (4 sessions)</li>
+                                <li><i class="fas fa-check-circle"></i> Application review</li>
+                                <li><i class="fas fa-check-circle"></i> College list development</li>
+                                <li><i class="fas fa-check-circle"></i> Interview preparation</li>
+                                <li><i class="fas fa-check-circle"></i> Scholarship search assistance</li>
+                            </ul>
+                            <a href="#" class="btn"><i class="fas fa-shopping-cart"></i> Enroll Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- SPECIALTY PROGRAMS -->
-            <div class="package-category">
-                <div class="category-title">
-                    <div class="category-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3>Specialty Programs</h3>
-                </div>
-                
-                <div class="package-grid">
-                    <!-- PAY-AS-YOU-GO -->
-                    <div class="package-card">
-                        <div class="package-header">
-                            <div class="package-name">Test Prep Single Session</div>
-                            <div class="package-price">$50 / lesson</div>
-                        </div>
-                        <p>One-on-one prep for a specific topic</p>
-                        <ul class="package-features">
-                            <li><i class="fas fa-check-circle"></i> Tailored SAT/ACT help</li>
-                            <li><i class="fas fa-check-circle"></i> Strategy or practice focus</li>
-                            <li><i class="fas fa-check-circle"></i> Flexible scheduling</li>
-                        </ul>
-                        <a href="#" class="btn"><i class="fas fa-shopping-cart"></i> Book Now</a>
-                    </div>
-
-                    <!-- SAT/ACT PREP -->
-                    <div class="package-card">
-                        <div class="package-header">
-                            <div class="package-name">SAT/ACT Prep</div>
-                            <div class="package-price">$42 / lesson</div>
-                        </div>
-                        <p>Comprehensive test preparation program</p>
-                        <ul class="package-features">
-                            <li><i class="fas fa-check-circle"></i> 12 hours of instruction</li>
-                            <li><i class="fas fa-check-circle"></i> Full practice tests</li>
-                            <li><i class="fas fa-check-circle"></i> Strategy sessions</li>
-                            <li><i class="fas fa-check-circle"></i> Personalized study plan</li>
-                            <li><i class="fas fa-check-circle"></i> Score improvement guarantee</li>
-                        </ul>
-                        <a href="#" class="btn"><i class="fas fa-shopping-cart"></i> Enroll Now</a>
-                    </div>
-
-                    <!-- COLLEGE APP -->
-                    <div class="package-card">
-                        <div class="package-header">
-                            <div class="package-name">College App Guidance</div>
-                            <div class="package-price">$100 / session</div>
-                        </div>
-                        <p>Complete support for college applications</p>
-                        <ul class="package-features">
-                            <li><i class="fas fa-check-circle"></i> Essay coaching (4 sessions)</li>
-                            <li><i class="fas fa-check-circle"></i> Application review</li>
-                            <li><i class="fas fa-check-circle"></i> College list development</li>
-                            <li><i class="fas fa-check-circle"></i> Interview preparation</li>
-                            <li><i class="fas fa-check-circle"></i> Scholarship search assistance</li>
-                        </ul>
-                        <a href="#" class="btn"><i class="fas fa-shopping-cart"></i> Enroll Now</a>
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-
-    <!-- CTA Section -->
+    <!-- ===================== -->
+    <!-- CTA SECTION -->
+    <!-- ===================== -->
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
@@ -1180,13 +1212,15 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===================== -->
+    <!-- FOOTER SECTION -->
+    <!-- ===================== -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>About Us</h3>
-                    <p style="margin-bottom: 20px;">All in Tutoring provides comprehensive K-12 tutoring and test preperation to help students reach their full potential.</p>
+                    <p style="margin-bottom: 20px;">All in Tutoring provides comprehensive K-12 tutoring and test preparation to help students reach their full potential.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
