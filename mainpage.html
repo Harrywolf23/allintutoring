@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All in Tutoring | K-12 & Test Prep Experts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --grand-blue: #1a56db;
+            --grand-blue-dark: #0d3aa9;
+            --grand-blue-light: #3c82f6;
+            --off-white: #f8f9fc;
+            --off-white-dark: #e8eaf2;
+            --accent-yellow: #f9c74f;
+            --accent-green: #43aa8b;
+            --accent-red: #e63946;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--off-white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            width: 100%; /* Ensure navbar takes full width */
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            flex-shrink: 0; /* Prevent logo from shrinking */
+        }
+
+        .logo-icon {
+            background: var(--grand-blue);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-right: 10px;
+            box-shadow: 0 4px 8px rgba(26, 86, 219, 0.3);
+            position: relative; /* For custom logo design */
+        }
+
+        /* Custom logo design - book with lightbulb */
+        .logo-icon::before {
+            content: "\f518"; /* Book icon */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+        }
+
+        .logo-icon::after {
+            content: "\f0eb"; /* Lightbulb icon */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            top: 70%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            font-size: 14px;
+            color: var(--accent-yellow);
+            background: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .logo-text {
+            font-family: 'Patrick Hand', cursive;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--grand-blue);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .logo-text span {
+            color: var(--accent-yellow);
+        }
+
+        /* Custom underline for logo text */
+        .logo-text::after {
+            content: "";
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, var(--grand-blue), var(--accent-yellow));
+            border-radius: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            justify-content: center; /* Center nav links */
+            flex-grow: 1; /* Allow links to take available space */
+            margin: 0 20px; /* Add spacing on sides */
+        }
+
+        .nav-links li {
+            margin: 0 15px; /* Adjusted spacing */
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 17px;
+            transition: color 0.3s;
+            position: relative;
+            padding: 5px 0;
+            white-space: nowrap; /* Prevent wrapping */
+        }
+
+        .nav-links a:hover {
+            color: var(--grand-blue);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--accent-yellow);
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: var(--grand-blue);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 16px;
+            box-shadow: 0 4px 12px rgba(26, 86, 219, 0.3);
+            flex-shrink: 0; /* Prevent button from shrinking */
+        }
+
+        .cta-button:hover {
+            background: var(--grand-blue-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(26, 86, 219, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--grand-blue), var(--grand-blue-dark));
+            color: white;
+            padding: 160px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 300px;
+            height: 300px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="none" stroke="white" stroke-width="2" stroke-opacity="0.1"/></svg>');
+            background-size: contain;
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-weight: 800;
+        }
+
+        .hero h1 span {
+            color: var(--accent-yellow);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-yellow);
+            color: #333;
+            box-shadow: 0 4px 12px rgba(249, 199, 79, 0.4);
+        }
+
+        .btn-primary:hover {
+            background-color: #f8b62a;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(249, 199, 79, 0.5);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 3px solid white;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background-color: var(--off-white-dark);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--grand-blue);
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .section-title p {
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            background: var(--grand-blue-light);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 40px;
+            box-shadow: 0 8px 20px rgba(26, 86, 219, 0.3);
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--grand-blue);
+        }
+
+        .service-card p {
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .service-card .btn {
+            padding: 10px 25px;
+            font-size: 16px;
+            background: var(--accent-green);
+            color: white;
+        }
+
+        .service-card .btn:hover {
+            background: #38967a;
+        }
+
+        /* Testimonials - Tutor Schools Section */
+        .testimonials {
+            padding: 100px 0;
+            background: linear-gradient(to bottom, var(--grand-blue-light), var(--grand-blue));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials::before {
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 250px;
+            height: 250px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="none" stroke="white" stroke-width="2" stroke-opacity="0.1"/></svg>');
+            background-size: contain;
+            border-radius: 50%;
+        }
+
+        .testimonials .section-title h2 {
+            color: white;
+        }
+
+        .testimonials .section-title p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly smaller min width */
+            gap: 25px; /* Reduced gap */
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 25px; /* Reduced padding */
+            position: relative;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 120px; /* Reduced height */
+        }
+
+        .testimonial-card::before {
+            content: """;
+            position: absolute;
+            top: 15px; /* Adjusted position */
+            left: 15px; /* Adjusted position */
+            font-size: 60px; /* Smaller size */
+            color: rgba(255, 255, 255, 0.2);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .client-avatar {
+            width: 60px; /* Fixed width */
+            height: 60px; /* Fixed height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .client-avatar img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .client-details h4 {
+            font-size: 1.2rem; /* Slightly smaller */
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .step-number {
+            width: 70px;
+            height: 70px;
+            background: var(--grand-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: 700;
+            margin: 0 auto 25px;
+            box-shadow: 0 8px 20px rgba(26, 86, 219, 0.3);
+        }
+
+        .step h3 {
+            font-size: 1.5rem;
+            color: var(--grand-blue);
+            margin-bottom: 15px;
+        }
+
+        .step p {
+            color: #555;
+        }
+
+        /* Packages Section */
+        .packages {
+            padding: 100px 0;
+            background-color: var(--off-white);
+        }
+
+        .package-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .package-category {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .category-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid var(--off-white-dark);
+        }
+
+        .category-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-right: 20px;
+            color: white;
+            background: var(--grand-blue);
+        }
+
+        .package-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .package-card {
+            background: var(--off-white-dark);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-color: var(--grand-blue-light);
+        }
+
+        .package-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .package-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--grand-blue);
+        }
+
+        .package-price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--grand-blue-dark);
+        }
+
+        .package-price span {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #777;
+        }
+
+        .package-features {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .package-features li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .package-features li:last-child {
+            border-bottom: none;
+        }
+
+        .package-features li i {
+            color: var(--accent-green);
+            margin-right: 10px;
+            font-size: 18px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .package-card .btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            margin-top: 10px;
+            background: var(--grand-blue);
+            color: white;
+        }
+
+        .package-card .btn:hover {
+            background: var(--grand-blue-dark);
+        }
+
+        .savings-badge {
+            background: var(--accent-yellow);
+            color: #333;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--accent-green), #2d8c70);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 250px;
+            height: 250px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="none" stroke="white" stroke-width="2" stroke-opacity="0.1"/></svg>');
+            background-size: contain;
+            border-radius: 50%;
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-content p {
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--grand-blue-dark);
+            color: #cbd5e1;
+            padding: 80px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-column h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-yellow);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #a3b3cc;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links a i {
+            margin-right: 10px;
+            width: 20px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-yellow);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s;
+            font-size: 18px;
+        }
+
+        .social-links a:hover {
+            background: var(--accent-yellow);
+            color: #333;
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #a3b3cc;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .nav-links li {
+                margin: 0 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .step {
+                min-width: 100%;
+            }
+            
+            .package-category {
+                min-width: 100%;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <div class="logo-icon"></div>
+                    <div class="logo-text">All in <span>Tutoring</span></div>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="mainpage.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="subjects.html"><i class="fas fa-book"></i> Subjects</a></li>
+                    <li><a href="test-prep.html"><i class="fas fa-chart-line"></i> Test Prep</a></li>
+                    <li><a href="#packages"><i class="fas fa-dollar-sign"></i> Packages</a></li>
+                </ul>
+                <button class="cta-button"><i class="fas fa-calendar-check"></i> Book Session</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Unlock Your Child's <span>Full Potential</span></h1>
+                <p>Personalized K-12 tutoring and test prep to help your child succeed in the classroom and beyond!</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary"><i class="fas fa-user-graduate"></i> Find Your Tutor</a>
+                    <a href="#" class="btn btn-secondary"><i class="fas fa-phone-alt"></i> Free Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Learning Programs</h2>
+                <p>We offer comprehensive tutoring solutions tailored to your child's unique needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3>K-12 Subjects</h3>
+                    <p>Personalized tutoring in math, science, English, history and all core subjects from elementary through high school.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                    <h3>Test Prep</h3>
+                    <p>Expert SAT, ACT, and AP exam preparation with proven strategies to boost scores and confidence.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <!-- New service card -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>College Guidance</h3>
+                    <p>Comprehensive college application assistance including essay editing, supplement guidance, and application strategy.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Tutor Schools Section -->
+<section class="testimonials">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Tutors' Schools</h2>
+            <p>Top talent from the nation’s leading universities</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="client-info">
+                    <div class="client-avatar">
+                        <img src="https://1000logos.net/wp-content/uploads/2017/11/UCLA-Logo.png" alt="UCLA Logo">
+                    </div>
+                    <div class="client-details">
+                        <h4>University of California, Los Angeles</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="client-info">
+                    <div class="client-avatar">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Harvard_University_coat_of_arms.svg/1200px-Harvard_University_coat_of_arms.svg.png" alt="Harvard Logo">
+                    </div>
+                    <div class="client-details">
+                        <h4>Harvard University</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="client-info">
+                    <div class="client-avatar">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/320px-MIT_logo.svg.png" alt="MIT Logo">
+                    </div>
+                    <div class="client-details">
+                        <h4>Massachusetts Institute of Technology</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="client-info">
+                    <div class="client-avatar">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/michigan-wolverines-2-logo-png-transparent.png" alt="Michigan Logo">
+                    </div>
+                    <div class="client-details">
+                        <h4>University of Michigan</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="client-info">
+                    <div class="client-avatar">
+                        <img src="https://images.parchment.com/images/college/1572-crest-250-200-5efaebd37b383a717d4234fb7a9623c1.png" alt="UT Austin Logo">
+                    </div>
+                    <div class="client-details">
+                        <h4>University of Texas at Austin</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="client-info">
+                    <div class="client-avatar">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/NU_RGB_seal_R.png" alt="Northeastern Logo">
+                    </div>
+                    <div class="client-details">
+                        <h4>Northeastern University</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="client-info">
+                    <div class="client-avatar">
+                        <img src="https://logos-world.net/wp-content/uploads/2022/02/UC-Berkeley-Seal-Logo.png" alt="UC Berkeley Logo">
+                    </div>
+                    <div class="client-details">
+                        <h4>University of California, Berkeley</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="client-info">
+                    <div class="client-avatar">
+                        <img src="https://logos-world.net/wp-content/uploads/2021/09/NYU-Logo.png" alt="NYU Logo">
+                    </div>
+                    <div class="client-details">
+                        <h4>New York University</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>How It Works</h2>
+                <p>Getting started with All in Tutoring is simple and effective</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Free Assessment</h3>
+                    <p>We evaluate your child's strengths and areas for improvement through a comprehensive assessment.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Personalized Plan</h3>
+                    <p>Our experts create a customized learning plan tailored to your child's specific needs and goals.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Match With Tutor</h3>
+                    <p>We connect you with the perfect tutor based on learning style, personality, and subject expertise.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Track Progress</h3>
+                    <p>Regular progress reports and parent-teacher conferences ensure continuous improvement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- Packages Section -->
+<section class="packages" id="packages">
+    <div class="container">
+        <div class="section-title">
+            <h2>Learning Packages & Programs</h2>
+            <p>Flexible options tailored to your educational needs</p>
+        </div>
+        
+        <div class="package-container">
+            <!-- LESSON PACKAGES -->
+            <div class="package-category">
+                <div class="category-title">
+                    <div class="category-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Lesson Packages</h3>
+                </div>
+                
+                <div class="package-grid">
+                    <!-- PAY-AS-YOU-GO -->
+                    <div class="package-card">
+                        <div class="package-header">
+                            <div class="package-name">Pay-as-you-go</div>
+                            <div class="package-price">$45 / lesson</div>
+                        </div>
+                        <p>Flexibility to book sessions one at a time</p>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> No commitment</li>
+                            <li><i class="fas fa-check-circle"></i> Any K-12 subject</li>
+                            <li><i class="fas fa-check-circle"></i> Online or in-person</li>
+                        </ul>
+                        <a href="#" class="btn"><i class="fas fa-shopping-cart"></i> Book Now</a>
+                    </div>
+
+                    <!-- STARTER -->
+                    <div class="package-card">
+                        <div class="package-header">
+                            <div class="package-name">Starter Pack</div>
+                            <div class="package-price">$40 / lesson</div>
+                        </div>
+                        <p>Perfect for trying out tutoring or targeted help</p>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> 5 hours of tutoring</li>
+                            <li><i class="fas fa-check-circle"></i> Any K-12 subject</li>
+                            <li><i class="fas fa-check-circle"></i> Homework help included</li>
+                            <li><i class="fas fa-check-circle"></i> 2-month validity</li>
+                            <li><i class="fas fa-check-circle"></i> Online or in-person</li>
+                        </ul>
+                        <div class="savings-badge">Save 10% vs single sessions</div>
+                        <a href="#" class="btn"><i class="fas fa-shopping-cart"></i> Get Started</a>
+                    </div>
+
+                    <!-- STANDARD -->
+                    <div class="package-card">
+                        <div class="package-header">
+                            <div class="package-name">Standard Pack</div>
+                            <div class="package-price">$35 / lesson</div>
+                        </div>
+                        <p>Great for ongoing support in one subject</p>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> 10 hours of tutoring</li>
+                            <li><i class="fas fa-check-circle"></i> Progress tracking</li>
+                            <li><i class="fas fa-check-circle"></i> Mid-term assessment</li>
+                            <li><i class="fas fa-check-circle"></i> 4-month validity</li>
+                            <li><i class="fas fa-check-circle"></i> Email support</li>
+                        </ul>
+                        <div class="savings-badge">Save 20% vs single sessions</div>
+                        <a href="#" class="btn"><i class="fas fa-shopping-cart"></i> Get Started</a>
+                    </div>
+
+                    <!-- PREMIUM -->
+                    <div class="package-card">
+                        <div class="package-header">
+                            <div class="package-name">Premium Pack</div>
+                            <div class="package-price">$33 / lesson</div>
+                        </div>
+                        <p>Best value for comprehensive learning support</p>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> 20 hours of tutoring</li>
+                            <li><i class="fas fa-check-circle"></i> Multiple subjects</li>
+                            <li><i class="fas fa-check-circle"></i> Priority scheduling</li>
+                            <li><i class="fas fa-check-circle"></i> Monthly progress reports</li>
+                            <li><i class="fas fa-check-circle"></i> 6-month validity</li>
+                        </ul>
+                        <div class="savings-badge">Save 30% vs single sessions</div>
+                        <a href="#" class="btn"><i class="fas fa-shopping-cart"></i> Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SPECIALTY PROGRAMS -->
+            <div class="package-category">
+                <div class="category-title">
+                    <div class="category-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Specialty Programs</h3>
+                </div>
+                
+                <div class="package-grid">
+                    <!-- PAY-AS-YOU-GO -->
+                    <div class="package-card">
+                        <div class="package-header">
+                            <div class="package-name">Test Prep Single Session</div>
+                            <div class="package-price">$50 / lesson</div>
+                        </div>
+                        <p>One-on-one prep for a specific topic</p>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> Tailored SAT/ACT help</li>
+                            <li><i class="fas fa-check-circle"></i> Strategy or practice focus</li>
+                            <li><i class="fas fa-check-circle"></i> Flexible scheduling</li>
+                        </ul>
+                        <a href="#" class="btn"><i class="fas fa-shopping-cart"></i> Book Now</a>
+                    </div>
+
+                    <!-- SAT/ACT PREP -->
+                    <div class="package-card">
+                        <div class="package-header">
+                            <div class="package-name">SAT/ACT Prep</div>
+                            <div class="package-price">$42 / lesson</div>
+                        </div>
+                        <p>Comprehensive test preparation program</p>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> 12 hours of instruction</li>
+                            <li><i class="fas fa-check-circle"></i> Full practice tests</li>
+                            <li><i class="fas fa-check-circle"></i> Strategy sessions</li>
+                            <li><i class="fas fa-check-circle"></i> Personalized study plan</li>
+                            <li><i class="fas fa-check-circle"></i> Score improvement guarantee</li>
+                        </ul>
+                        <a href="#" class="btn"><i class="fas fa-shopping-cart"></i> Enroll Now</a>
+                    </div>
+
+                    <!-- COLLEGE APP -->
+                    <div class="package-card">
+                        <div class="package-header">
+                            <div class="package-name">College App Guidance</div>
+                            <div class="package-price">$100 / session</div>
+                        </div>
+                        <p>Complete support for college applications</p>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> Essay coaching (4 sessions)</li>
+                            <li><i class="fas fa-check-circle"></i> Application review</li>
+                            <li><i class="fas fa-check-circle"></i> College list development</li>
+                            <li><i class="fas fa-check-circle"></i> Interview preparation</li>
+                            <li><i class="fas fa-check-circle"></i> Scholarship search assistance</li>
+                        </ul>
+                        <a href="#" class="btn"><i class="fas fa-shopping-cart"></i> Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Child's Learning?</h2>
+                <p>Schedule a free consultation today and discover how we can help your child succeed</p>
+                <a href="#" class="btn btn-primary"><i class="fas fa-calendar-alt"></i> Book Free Assessment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p style="margin-bottom: 20px;">All in Tutoring provides comprehensive K-12 tutoring and test preperation to help students reach their full potential.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-phone"></i> (914) 924-8405</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> learn@allintutoring.com</a></li>
+                        <li><a href="#"><i class="fas fa-clock"></i> Mon-Sat: 8AM - 8PM</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
