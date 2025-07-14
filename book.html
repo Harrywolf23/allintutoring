@@ -7,12 +7,30 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Patrick+Hand&display=swap" rel="stylesheet"/>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --grand-blue: #1a56db;
+      --grand-blue-dark: #0d3aa9;
+      --grand-blue-light: #3c82f6;
+      --off-white: #f8f9fc;
+      --off-white-dark: #e8eaf2;
+      --accent-yellow: #f9c74f;
+      --accent-green: #43aa8b;
+      --accent-red: #e63946;
+    }
+
     body {
       font-family: 'Nunito', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f8f9fc;
+      background-color: var(--off-white);
       color: #333;
+      line-height: 1.6;
     }
 
     header {
@@ -37,28 +55,87 @@
       padding: 15px 0;
     }
 
-    .logo-icon {
-      background: #1a56db;
-      color: white;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      margin-right: 10px;
-    }
+    .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            flex-shrink: 0; /* Prevent logo from shrinking */
+        }
 
-    .logo-text {
-      font-family: 'Patrick Hand', cursive;
-      font-size: 32px;
-      font-weight: 700;
-      color: #1a56db;
-    }
+        .logo-icon {
+            background: var(--grand-blue);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-right: 10px;
+            box-shadow: 0 4px 8px rgba(26, 86, 219, 0.3);
+            position: relative; /* For custom logo design */
+        }
+
+        /* Custom logo design - book with lightbulb */
+        .logo-icon::before {
+            content: "\f518"; /* Book icon */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+        }
+
+        .logo-icon::after {
+            content: "\f0eb"; /* Lightbulb icon */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            top: 70%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            font-size: 14px;
+            color: var(--accent-yellow);
+            background: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .logo-text {
+            font-family: 'Patrick Hand', cursive;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--grand-blue);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .logo-text span {
+            color: var(--accent-yellow);
+        }
+
+        /* Custom underline for logo text */
+        .logo-text::after {
+            content: "";
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, var(--grand-blue), var(--accent-yellow));
+            border-radius: 2px;
+        }
 
     .logo-text span {
-      color: #f9c74f;
+      color: var(--accent-yellow);
     }
 
     .nav-links {
@@ -76,15 +153,51 @@
       font-weight: 600;
       font-size: 17px;
       position: relative;
+      padding: 5px 0;
     }
 
     .nav-links a:hover {
-      color: #1a56db;
+      color: var(--grand-blue);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: var(--accent-yellow);
+      border-radius: 2px;
+      transition: width 0.3s;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .cta-button {
+      background: var(--grand-blue);
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: 16px;
+      box-shadow: 0 4px 12px rgba(26, 86, 219, 0.3);
+    }
+
+    .cta-button:hover {
+      background: var(--grand-blue-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(26, 86, 219, 0.4);
     }
 
     .hero {
       padding: 150px 20px 60px;
-      background: linear-gradient(135deg, #1a56db, #0d3aa9);
+      background: linear-gradient(135deg, var(--grand-blue), var(--grand-blue-dark));
       color: white;
       text-align: center;
     }
@@ -97,7 +210,7 @@
     .hero p {
       font-size: 1.2rem;
       max-width: 700px;
-      margin: auto;
+      margin: auto auto 25px;
     }
 
     .booking-section {
@@ -107,73 +220,185 @@
     .section-title {
       text-align: center;
       font-size: 2.5rem;
-      color: #1a56db;
+      color: var(--grand-blue);
       margin-bottom: 40px;
+      font-weight: 800;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      font-size: 1.2rem;
     }
 
     .calendly-container {
       max-width: 800px;
       margin: 0 auto 60px;
-    }
-
-    .contact-form {
-      max-width: 800px;
-      margin: 0 auto;
-      background: #fff;
-      padding: 30px;
+      background: white;
       border-radius: 15px;
+      padding: 20px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     }
 
-    .contact-form h2 {
-      color: #1a56db;
-      font-size: 1.8rem;
-      margin-bottom: 20px;
+    .contact-section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 50px 0;
     }
 
-    .contact-form label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 600;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-
-    .contact-form button {
-      background-color: #1a56db;
-      color: white;
-      border: none;
-      padding: 12px 30px;
-      font-size: 1rem;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .contact-form button:hover {
-      background-color: #0d3aa9;
-    }
-
-    .email-info {
+    .contact-title {
       text-align: center;
+      font-size: 2rem;
+      color: var(--grand-blue);
+      margin-bottom: 30px;
+    }
+
+    .contact-subtitle {
+      text-align: center;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto 40px;
       font-size: 1.1rem;
+    }
+
+    .contact-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
       margin-top: 30px;
-      color: #444;
+    }
+
+    .contact-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      border-color: var(--accent-yellow);
+    }
+
+    .contact-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 32px;
+      color: white;
+    }
+
+    .phone-icon {
+      background: var(--accent-green);
+    }
+
+    .email-icon {
+      background: var(--accent-red);
+    }
+
+    .whatsapp-icon {
+      background: #25D366;
+    }
+
+    .contact-card h3 {
+      color: var(--grand-blue);
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .contact-info {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .contact-description {
+      color: #666;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: var(--grand-blue);
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .contact-btn:hover {
+      background: var(--grand-blue-dark);
+      transform: translateY(-3px);
+    }
+
+    .contact-actions {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .contact-actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--grand-blue);
+      color: white;
+      font-size: 20px;
+      transition: all 0.3s;
+    }
+
+    .contact-actions a:hover {
+      background: var(--grand-blue-dark);
+      transform: translateY(-3px);
     }
 
     footer {
-      background: #0d3aa9;
+      background: var(--grand-blue-dark);
       color: #cbd5e1;
       padding: 40px 0;
       text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #a3b3cc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-yellow);
+    }
+
+    .copyright {
+      margin-top: 20px;
+      font-size: 0.95rem;
     }
 
     @media (max-width: 768px) {
@@ -183,6 +408,23 @@
 
       .section-title {
         font-size: 2rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .contact-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .logo {
+        margin-bottom: 15px;
       }
     }
   </style>
@@ -201,8 +443,8 @@
         <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
         <li><a href="subjects.html"><i class="fas fa-book"></i> Subjects</a></li>
         <li><a href="test-prep.html"><i class="fas fa-chart-line"></i> Test Prep</a></li>
-        <li><a href="index.html#packages"><i class="fas fa-dollar-sign"></i> Packages</a></li>
       </ul>
+      <button class="cta-button"><i class="fas fa-calendar-check"></i> Book Session</button>
     </nav>
   </div>
 </header>
@@ -216,34 +458,76 @@
 <!-- Booking Section -->
 <section class="booking-section">
   <h2 class="section-title">Schedule with Us</h2>
+  <p class="section-subtitle">Select a time that works best for you from our calendar below</p>
+  
   <div class="calendly-container">
     <!-- Calendly Embed Code -->
     <div class="calendly-inline-widget" data-url="https://calendly.com/harry-wolf2025/30min" style="min-width:320px;height:630px;"></div>
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
   </div>
-
-  <div class="contact-form">
-    <h2>Contact Us Directly</h2>
-    <form action="mailto:your@email.com" method="POST" enctype="text/plain">
-      <label for="name">Your Name</label>
-      <input type="text" name="name" id="name" required />
-
-      <label for="email">Your Email</label>
-      <input type="email" name="email" id="email" required />
-
-      <label for="message">Message</label>
-      <textarea name="message" id="message" rows="5" required></textarea>
-
-      <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
-    </form>
-
-    <p class="email-info">Or email us directly at: <strong>contact@allintutoring.com</strong></p>
+  
+  <!-- Contact Information Section -->
+  <div class="contact-section">
+    <h2 class="contact-title">Prefer to Contact Us Directly?</h2>
+    <p class="contact-subtitle">We're always available to answer your questions and help you get started</p>
+    
+    <div class="contact-cards">
+      <div class="contact-card">
+        <div class="contact-icon phone-icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        <h3>Call Us</h3>
+        <div class="contact-info">914-924-8405</div>
+        <p class="contact-description">Available Monday to Saturday, 8AM to 8PM</p>
+        <a href="tel:9149248405" class="contact-btn">
+          <i class="fas fa-phone"></i> Call Now
+        </a>
+      </div>
+      
+      <div class="contact-card">
+        <div class="contact-icon email-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h3>Email Us</h3>
+        <div class="contact-info">blahblah@gmail.com</div>
+        <p class="contact-description">We typically respond within 24 hours</p>
+        <a href="mailto:blahblah@gmail.com" class="contact-btn">
+          <i class="fas fa-envelope"></i> Send Email
+        </a>
+      </div>
+      
+      <div class="contact-card">
+        <div class="contact-icon whatsapp-icon">
+          <i class="fab fa-whatsapp"></i>
+        </div>
+        <h3>Message Us</h3>
+        <div class="contact-info">Via WhatsApp</div>
+        <p class="contact-description">Chat with us for quick questions and support</p>
+        <a href="https://wa.me/19149248405" class="contact-btn" target="_blank">
+          <i class="fab fa-whatsapp"></i> Message Now
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- Footer -->
 <footer>
-  <p>&copy; 2025 All in Tutoring. All rights reserved.</p>
+  <div class="container">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="subjects.html">Subjects</a>
+      <a href="test-prep.html">Test Prep</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+    <div class="contact-info">
+      <p>914-924-8405 | blahblah@gmail.com</p>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 All in Tutoring. All rights reserved.</p>
+    </div>
+  </div>
 </footer>
 
 </body>
